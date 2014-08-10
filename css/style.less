@@ -1,0 +1,405 @@
+@import 'clearfix.less';
+@import 'gradients.less';
+@import 'vendor-prefixes.less';
+
+/*navbar*/
+
+@sideBarColor: #033;
+@transparent: rgba(255,255,255, 0.3);
+@yellow: #fabc00;
+@Raleway: 'Raleway', 'calibri';
+@OpenSans: 'Open Sans', sans-serif;
+@min-height: 660px;
+@red: #8f3a4a;
+@blue: #043d5d;
+@button-shadow-color: #ab6603;
+@black: #0b0b0b;
+
+a{
+    &:hover {
+        text-decoration: none;
+    }
+    text-decoration: none;
+}
+.container {
+    width: 100%;
+    max-width: 1025px;
+}
+body, html {
+    min-width: 1000px;
+    .clearfix();
+    height: 100%;
+    // width: 100%;
+    min-height: @min-height;
+
+}
+#body{
+    // float: left;
+    overflow: auto;
+    margin: 0;
+    height: 100%;
+    min-height: @min-height;
+    text-align: center;
+}
+section {
+    text-align: center;
+    height: 100%;
+    background-color: #eaf1f9;
+    min-height: @min-height;
+}
+.nav {
+    float: left;
+    min-height: @min-height;
+    position: relative;
+    // min-width: 250px;
+    width: 22%;
+    max-width: 280px;
+    height: 100%;
+    background-color: @sideBarColor;
+}
+
+hr {
+    border: none;
+    width: 82%;
+    margin: 10px auto;
+    border-bottom: 1px solid @transparent;
+}
+
+nav {
+    padding-left: 14%;
+    margin-bottom: 20px;
+
+    a {
+        .transition(.2s);
+        &.selected {
+            color: @yellow;
+        }
+        @media (min-height: 900px) {
+            font-size: 25px;
+            margin: 30px 0;
+        }
+        margin: 35px 0;
+        &:hover {
+            color: white;
+        }
+        color: #fff;
+        display: block;
+        font: bold 21px  @Raleway;
+        &:last-of-type {
+            margin-bottom: 20px;
+        }
+        &:first-of-type {
+            margin-top: 20px;
+        }
+    }
+}
+
+.lang {
+    padding-left: 14%;
+    margin: 27px 0;
+    .clearfix();
+    a {
+        &.selected {
+            color: #fff;
+        }
+        padding: 3px;
+        font: bold 12px/17px  @Raleway;
+        margin-right: 13px;
+        color: @transparent;
+        float: left;
+        border: 1px solid @transparent;
+        display: block;
+    }
+}
+.logo {
+    font: 900 36px/70px @Raleway;
+    color: #fff;
+    @media (min-height: 900px){
+        padding: 55px 10px;
+        font-size: 40px;
+    }
+    display: block;
+    padding: 37px 8px 23px;
+    text-align: center;
+}
+
+.socials {
+    position: absolute;
+    margin-left: 28%;
+    left: 0;
+    bottom: 20px;
+    right: 0;
+    .clearfix();
+    a {
+        width: 30px;
+        height: 30px;
+        float: left;
+        margin: 0 5px;
+        display: block;
+    }
+}
+#fb {
+    background: url(../img/fb-ico.png);
+}
+#vk {
+    background: url(../img/vk-ico.png);
+}
+.upper {
+    text-transform: uppercase;
+}
+/*section*/
+//main
+.red {
+    background-color: fade(@red, 75%);
+    height: 51%;
+    position: relative;
+}
+.blue {
+    background-color: fade(@blue, 75%);
+    padding:7vh 0 6vh;
+    height: 49%;
+}
+#main {
+    background: url(../img/main-bg.png) 50% 50% no-repeat;
+    background-size: cover;
+}
+.service {
+    text-align: center;
+    img {
+        height: 64px;
+        margin-bottom: 11px;
+    }
+    .about {
+        display: block;
+        margin: 17px auto;
+        color: white;
+        width: 75%;
+        text-align: center;
+        font: 15px/15px @Raleway;
+    }
+}
+.callback {
+    margin-bottom: 15vh;
+    border: 1px solid #fff;    
+}
+.button {
+    box-shadow: 2px 2px 1px @button-shadow-color;    
+    padding: 19px 10px;
+    width: 34%;
+    display: block;
+    margin: 5% 0 0 36%;
+    .transition(.2s);
+    border: 3px solid @yellow;
+    &:hover {
+        color: @black;
+    }
+    &:active {
+        background-color: white;
+    }
+    color: @black;
+    font: 900 19px @Raleway;
+    position: relative;
+    &.shadow{
+        width: 250px;
+        position: absolute;
+        margin:auto;
+        left:0;
+        right: 0;
+        bottom: 58px;
+        &:after {
+            display: block;
+            content: '';
+            left: 0;
+            top: 0;
+            position: absolute;
+            width: 163%;
+            height: 200%;
+            background: url(../img/button-shadow.png) no-repeat;
+            background-position: 14% -14%;
+        } 
+    }
+    
+}
+.yellow {
+    background-color: @yellow;
+}
+.green {
+     #gradient > .vertical(#05cf22,#00a818);
+}
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+input {
+    outline: none;
+}
+h1 {
+    text-align: center;
+    margin: 0 auto 5%;
+    color:  white;
+    font: bold 47px/43px @Raleway;
+}
+h2 {
+    
+    color: #fff;
+    text-align: center;
+    font: bold 41px/43px @Raleway;
+}
+h3 {
+    color: #fff;
+    padding-bottom:5%;
+    text-align: center;
+    font: 400 32px/37px @Raleway;
+}
+h6 {
+    font: bold 20px/18px @Raleway;
+    color: white;
+    margin: 0;
+}
+.underline {
+    display: inline-block;
+    border-bottom: 2px solid fade(white, 50%);
+}
+//calc
+
+.check(@number) {
+    .checkboxes input[type="checkbox"]:nth-of-type(@{number}):checked ~ .checkbox:nth-of-type(@{number}){
+        background-color: @yellow;
+        &:after {
+            border-color: lighten(@yellow, 15%);
+            background: url(../img/select.png) 50% 50% no-repeat, white;
+            background-size: contain;
+        }
+    }
+}
+.check(1);
+.check(2);
+.check(3);
+input[type="checkbox"] {
+    display: none;
+}
+@checkbox-size: 20px;
+.checkbox {
+    cursor: pointer;
+    display: block;
+    background-color: lighten(@yellow, 15%);
+    color: white;
+    padding: 20px;
+    position: relative;
+    &:after {
+        width: @checkbox-size;
+        height: @checkbox-size;
+        content: '';
+        border: 4px solid white;
+        left: 20px;
+        top: 50% - @checkbox-size;
+        position: absolute;
+
+    }
+}
+.black {
+    color: @sideBarColor;
+}
+.row {
+    overflow: hidden;
+}
+h4{
+    font: 700 42px @OpenSans;
+}
+hr.vertical{
+    width: 0;
+    display: block;
+    height: 460px;
+    margin: auto;
+    border: none;
+    border-right: 3px solid fade(#162638, 25%);
+}
+.info {
+    span {
+        color: #333;
+        font: bold 30px @OpenSans;
+    }
+    .arrow {
+        width: 485px;
+        height: 65px;
+        background: url(../img/arrow.png) no-repeat;
+        background-size: contain;
+        margin: auto;
+    }
+}
+
+/*contacts*/
+
+@contacts-bg: #e8eaec;
+.placeholder(@color, @font) {
+        &::-webkit-input-placeholder {
+            font: @font;
+            color: @color;
+        }
+        &:-moz-placeholder {
+            font: @font;
+            color: @color;
+        }
+        &::-moz-placeholder {
+            font: @font;
+            color: @color;       
+        }
+        &:-ms-input-placeholder {  
+            font: @font;
+            color: @color;  
+        }
+    }
+#contacts {
+    position: relative;
+    input {
+        height: 40px;
+        width: 220px;
+        border: 2px solid rgba(153,153,153,0.3);
+        padding: 0 10px;
+        color: @gray;
+        font: @Raleway;
+        .placeholder(@gray, @Raleway);
+    }
+    form span{
+        font: 13px @Raleway;
+    }
+    hr {
+        border-color: rgba(red(@sideBarColor),green(@sideBarColor), blue(@sideBarColor),0.3);
+    }
+    button {
+        margin: 5vh auto 4vh;
+    }
+}
+.map {
+    height: 25%;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+}
+@gray: #666;
+// h3 {
+//     padding: 5vh 0 1vh;
+//     font: 30px @Raleway;
+//     color: black;
+// }
+// h6 {
+//     margin: 3vh 0 1.2vh;
+//     font: 15px @Raleway;
+//     color: #333;
+// }
+address {
+    text-align: center;
+    div {
+        display: inline-block;
+        font: 17px @Raleway;
+        color: @gray;
+        margin: 0 20px;
+        span {
+            font: 17px @Raleway;
+            color: #333;
+        }
+    }
+}
