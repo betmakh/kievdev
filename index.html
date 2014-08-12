@@ -370,26 +370,26 @@
             </div>
         </section>
         <section id="contacts">
-            <div class="info">
-                <h3>Свяжитесь с нами</h3>
-            <form>  
-                <h6>Как вас зовут?</h6>
-                <input type="text">
-                <h6>Как с вами связаться?</h6>
-                <input type='email' placeholder="Введите e-mail"> 
-                <span>или</span>   
-                <input type="text" placeholder="+38 (___) ___ __ __">
-                <button action="submit" class="button green upper">Позвонить мне</button>
+            <div>
+                <h4>Свяжитесь с нами</h4>
+            <form name="callback">  
+                <h6 class="black">Как вас зовут?</h6>
+                <input name="name" tabindex="1" type="text">
+                <h6 class="black">Как с вами связаться?</h6>
+                <input type='email' tabindex='2' name="mail" placeholder="Введите e-mail"> 
+                <span class="upper">или</span>   
+                <input type="tel" tabindex='3' name="tel" placeholder="+38 (___) ___ __ __">
+                <button action="submit" class="button yellow upper">Позвонить мне</button>
             </form>
             <hr>
-            <h3>Как нас найти</h3>
+            <h4>Как нас найти</h4>
             <address>
                 <div class="address">
-                    <span>Адрес:</span><br>
+                    <span class="dark-gray">Адрес:</span><br>
                     Киев, ул. Шевченко, д.2, оф.2
                 </div>                
                 <div class="phone">
-                    <span>Телефон:</span><br>
+                    <span class="dark-gray">Телефон:</span><br>
                     +38 050 123 45 67
                 </div>
             </address>

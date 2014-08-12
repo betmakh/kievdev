@@ -132,30 +132,6 @@ label[for="file"].button {
   color: #999999;
   font: 600 18px 'Open Sans', sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003740}}
-.modal-content .input input::-webkit-input-placeholder,
-.modal-content .input textarea::-webkit-input-placeholder {
-  font: 600 18px 'Open Sans', sans-serif;
-  color: #999999;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003744}}
-.modal-content .input input:-moz-placeholder,
-.modal-content .input textarea:-moz-placeholder {
-  font: 600 18px 'Open Sans', sans-serif;
-  color: #999999;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003748}}
-.modal-content .input input::-moz-placeholder,
-.modal-content .input textarea::-moz-placeholder {
-  font: 600 18px 'Open Sans', sans-serif;
-  color: #999999;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003752}}
-.modal-content .input input:-ms-input-placeholder,
-.modal-content .input textarea:-ms-input-placeholder {
-  font: 600 18px 'Open Sans', sans-serif;
-  color: #999999;
-}
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003102}}
 .modal-content .input textarea {
   resize: vertical;
@@ -694,18 +670,20 @@ hr.vertical {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003537}}
 .sort {
+  margin: 3vh auto 2vh;
+  display: block;
   font: 700 18px 'Raleway', 'calibri';
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003542}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003543}}
 .select {
-  margin: auto;
+  margin: 0 auto 2vh;
   position: relative;
   overflow: hidden;
   width: 230px;
   height: 40px;
   background: url(../img/select-arrow.png) 90% 50% no-repeat, #adc9d9;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003544}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003545}}
 .select select {
   -webkit-appearance: none;
   appearance: none;
@@ -720,11 +698,11 @@ hr.vertical {
   font: 14px Arial, sans-serif;
   pading: 10px 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003566}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003567}}
 div.site {
   margin: 3vh auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003568}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003569}}
 div.site h6,
 div.site span,
 div.site img {
@@ -734,40 +712,40 @@ div.site img {
   z-index: 1;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003573}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003574}}
 div.site img {
   z-index: 2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003576}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003577}}
 div.site .info {
   display: block;
   margin: auto;
   font: 18px Arial, sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003582}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003583}}
 div.site:hover img {
   -webkit-transform: scale(1.25, 1.35);
   -ms-transform: scale(1.25, 1.35);
   -o-transform: scale(1.25, 1.35);
   transform: scale(1.25, 1.35);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003588}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003589}}
 div.site img {
   width: 70%;
   max-width: 300px;
   margin: 5px auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003599}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003600}}
 #about {
   height: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003600}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003601}}
 #about h4 + span {
   font: 30px 'Raleway', 'calibri';
   margin-bottom: 4vh;
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003608}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003609}}
 .feedback {
   width: 470px;
   border: 2px solid #fabc00;
@@ -777,11 +755,11 @@ div.site img {
   position: relative;
   z-index: 2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003610}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003611}}
 .feedback .feedback-wrapper {
   margin: 10px auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003621}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003622}}
 .feedback:before,
 .feedback:after {
   content: '';
@@ -792,7 +770,7 @@ div.site img {
   left: 20px;
   top: -28px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003630}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003631}}
 .feedback:after {
   border-color: #fabc00 transparent;
   z-index: 1;
@@ -800,21 +778,21 @@ div.site img {
   left: 19px;
   border-width: 0 31px 31px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003637}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003638}}
 .feedback:before {
   border-color: white transparent;
   z-index: 2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003641}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003642}}
 .feedback .name {
   font: bold 30px Arial, serif;
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003647}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003648}}
 .feedback a {
   color: #404040;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003651}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003652}}
 .feedback span {
   text-align: left;
   display: block;
@@ -822,77 +800,77 @@ div.site img {
   margin: 10px 0;
   font: bold 18px Arial, sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003658}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003659}}
 .feedback .info {
   padding: 10px;
   text-align: left;
   width: 70%;
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003664}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003665}}
 .feedback .photo {
   padding: 10px;
   width: 30%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003665}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003666}}
 .feedback .photo img {
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003672}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003673}}
 p {
   font: 18px 'Raleway', 'calibri';
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003677}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003678}}
 #blog h4 + span {
   display: block;
   font: bold 30px 'Raleway', 'calibri';
   margin: 3vh auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003683}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003684}}
 .blog-category {
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003684}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003685}}
 .blog-category.ui .img {
   background-image: url(../img/blog/ui-design.png);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003686}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003687}}
 .blog-category.ui .img:hover {
   background-image: url(../img/blog/ui-design-hover.png);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003690}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003691}}
 .blog-category.seo .img {
   background-image: url(../img/blog/seo.png);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003692}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003693}}
 .blog-category.seo .img:hover {
   background-image: url(../img/blog/seo-hover.png);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003696}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003697}}
 .blog-category.html .img {
   background-image: url(../img/blog/html.png);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003698}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003699}}
 .blog-category.html .img:hover {
   background-image: url(../img/blog/html-hover.png);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003702}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003703}}
 .blog-category.marketing .img {
   background-image: url(../img/blog/marketing.png);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003704}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003705}}
 .blog-category.marketing .img:hover {
   background-image: url(../img/blog/marketing-hover.png);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003708}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003709}}
 .blog-category.programming .img {
   background-image: url(../img/blog/programming.png);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003710}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003711}}
 .blog-category.programming .img:hover {
   background-image: url(../img/blog/programming-hover.png);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003715}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003716}}
 .blog-category span {
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
@@ -901,12 +879,12 @@ p {
   color: #043d5d;
   border-color: rgba(4, 61, 93, 0.5);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003716}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003717}}
 .blog-category span:hover {
   color: #fabc00;
   border-color: rgba(250, 188, 0, 0.5);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003725}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003726}}
 .blog-category .img {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -917,11 +895,12 @@ p {
   background-size: 128px auto;
 }
 /*contacts*/
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003757}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003741}}
 #contacts {
+  height: auto;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003759}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003744}}
 #contacts input {
   height: 40px;
   width: 220px;
@@ -933,77 +912,67 @@ p {
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/myPerfectMixins\.less}line{font-family:\000032}}
 #contacts input::-webkit-input-placeholder {
   color: #666666;
-  font: 'Raleway', 'calibri';
+  font: 17px 'Raleway', 'calibri';
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/myPerfectMixins\.less}line{font-family:\000036}}
 #contacts input:-moz-placeholder {
   color: #666666;
-  font: 'Raleway', 'calibri';
+  font: 17px 'Raleway', 'calibri';
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/myPerfectMixins\.less}line{font-family:\0000310}}
 #contacts input::-moz-placeholder {
   color: #666666;
-  font: 'Raleway', 'calibri';
+  font: 17px 'Raleway', 'calibri';
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/myPerfectMixins\.less}line{font-family:\0000314}}
 #contacts input:-ms-input-placeholder {
   color: #666666;
-  font: 'Raleway', 'calibri';
+  font: 17px 'Raleway', 'calibri';
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003740}}
-#contacts input::-webkit-input-placeholder {
-  font: 'Raleway', 'calibri';
-  color: #666666;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003744}}
-#contacts input:-moz-placeholder {
-  font: 'Raleway', 'calibri';
-  color: #666666;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003748}}
-#contacts input::-moz-placeholder {
-  font: 'Raleway', 'calibri';
-  color: #666666;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003752}}
-#contacts input:-ms-input-placeholder {
-  font: 'Raleway', 'calibri';
-  color: #666666;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003768}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003753}}
 #contacts form span {
-  font: 13px 'Raleway', 'calibri';
+  font: 18px 'Raleway', 'calibri';
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003771}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003756}}
+#contacts h4 {
+  font: bold 42px 'Raleway', 'calibri';
+  color: black;
+  margin: 4vh auto 2vh;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003761}}
+#contacts h6 {
+  margin: 4vh auto 2vh;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003764}}
 #contacts hr {
   border-color: rgba(0, 51, 51, 0.3);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003774}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003767}}
 #contacts button {
   margin: 5vh auto 4vh;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003778}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003771}}
 .map {
   height: 25%;
-  background-color: yellow;
-  position: absolute;
+  background-color: transparent;
   bottom: 0;
-  z-index: -1;
+  z-index: 1;
+  min-height: 200px;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003797}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003781}}
 address {
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003799}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003783}}
 address div {
   display: inline-block;
   font: 17px 'Raleway', 'calibri';
-  color: #666666;
+  color: black;
   margin: 0 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003804}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Nikita\/Documents\/git\/kievdev\/css\/less\/style\.less}line{font-family:\00003788}}
 address div span {
-  font: 17px 'Raleway', 'calibri';
-  color: #333333;
+  font: 24px 'Raleway', 'calibri';
+  color: black;
 }

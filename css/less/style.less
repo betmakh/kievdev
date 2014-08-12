@@ -535,7 +535,8 @@ hr.vertical{
     }
 }
 .sort {
-    
+    margin: 3vh auto 2vh;
+    display: block;
     font: 700 18px @Raleway;
   
 }
@@ -555,7 +556,7 @@ hr.vertical{
         font: 14px Arial, sans-serif;
         pading: 10px 5px;
     }
-    margin: auto;
+    margin: 0 auto 2vh;
     position: relative;
     overflow: hidden;
     width: @select-width;
@@ -736,25 +737,9 @@ p {
 /*contacts*/
 
 @contacts-bg: #e8eaec;
-.placeholder(@color, @font) {
-        &::-webkit-input-placeholder {
-            font: @font;
-            color: @color;
-        }
-        &:-moz-placeholder {
-            font: @font;
-            color: @color;
-        }
-        &::-moz-placeholder {
-            font: @font;
-            color: @color;       
-        }
-        &:-ms-input-placeholder {  
-            font: @font;
-            color: @color;  
-        }
-    }
+
 #contacts {
+    height: auto;
     position: relative;
     input {
         height: 40px;
@@ -763,10 +748,18 @@ p {
         padding: 0 10px;
         color: @gray;
         font: @Raleway;
-        .placeholder(@gray, @Raleway);
+        .placeholder(@gray, 17px @Raleway);
     }
     form span{
-        font: 13px @Raleway;
+        font: 18px @Raleway;
+    }
+    h4 {
+        font: bold 42px @Raleway;
+        color: black;
+        margin: 4vh auto 2vh;
+    }
+    h6 {
+       margin: 4vh auto 2vh; 
     }
     hr {
         border-color: rgba(red(@sideBarColor),green(@sideBarColor), blue(@sideBarColor),0.3);
@@ -777,33 +770,24 @@ p {
 }
 .map {
     height: 25%;
-    background-color: yellow;
-    position: absolute;
+    background-color: transparent;
+    // position: absolute;
     bottom: 0;
-    z-index: -1;
+    z-index: 1;
+    min-height: 200px;
     width: 100%;
 }
 @gray: #666;
-// h3 {
-//     padding: 5vh 0 1vh;
-//     font: 30px @Raleway;
-//     color: black;
-// }
-// h6 {
-//     margin: 3vh 0 1.2vh;
-//     font: 15px @Raleway;
-//     color: #333;
-// }
 address {
     text-align: center;
     div {
         display: inline-block;
         font: 17px @Raleway;
-        color: @gray;
+        color: black;
         margin: 0 20px;
         span {
-            font: 17px @Raleway;
-            color: @dark-gray;
+            font: 24px @Raleway;
+            color: black;
         }
     }
 }
