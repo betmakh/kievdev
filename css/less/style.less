@@ -1,6 +1,6 @@
 @import 'clearfix.less';
-@import 'gradients.less';
 @import 'vendor-prefixes.less';
+@import 'myPerfectMixins.less';
 
 /*navbar*/
 
@@ -14,6 +14,138 @@
 @blue: #043d5d;
 @button-shadow-color: #ab6603;
 @black: #0b0b0b;
+@dark-blue: #162638;
+@dark-gray: #333;
+@field-height: 30px;
+.dark-gray {
+    color: @dark-gray;
+}
+// feedback modal
+#file {
+    display: none;
+}
+label[for="file"]{
+    border-color: @dark-gray;
+    cursor: pointer;
+    height: @field-height;
+    margin: 0;
+    width: auto;
+    &.button {
+        padding: 3px 10px;
+        font: bold 14px @OpenSans;
+    }
+    
+}
+//modal
+.dark-blue {
+    color: @dark-blue;
+}
+.modal-dialog {
+    min-width: 780px;
+}
+.modal-content {
+    
+    .field {
+        margin: 10px 0;
+    }
+    .option {
+        .hide {
+            display: none;
+        }
+        .transition(.2s);
+        color: @dark-gray;
+        padding: 10px 20px 10px 10px;
+        background-color: #e0e0e0; 
+        font: bold 14px @OpenSans;
+        min-width: 200px;
+        margin: 5px auto;
+        &.full-width{
+            width: 100%;
+        }
+        &.half-width {
+            &:nth-of-type(2n){
+                margin-right: 0;
+            }
+            margin-right: 2%;
+            width: 45%;
+        }
+        .exit {
+            height: 20px;
+            width: 20px;
+        }
+    }
+    .fieldname, span {
+        font: bold 14px/@field-height @OpenSans;
+        text-align: right;
+        padding: 0 10px;
+        display: block;
+        width: 35%;
+        float: left;
+    }
+    .button {
+        padding: 10px 15px;
+    }
+    .input {
+        input, textarea {
+            outline: none;
+            padding: 0 10px;
+            display: block;
+            width: 100%;
+            border: 2px solid #dfdfdf;
+            &:focus {
+                border-color: fade(@yellow, 15%);
+            }
+            font: 600 18px/@field-height @OpenSans;
+            color: #999;
+            .placeholder(#999, 600 18px  @OpenSans);
+        }
+        textarea {
+            resize: vertical;
+        }
+        span {
+            text-align: center;
+            width: 100%;
+            margin: 10px auto;
+        }
+        float: left;
+        width: 55%;
+        display: block;
+    }
+    .modal-header {
+        .close {
+            .transition(.3s);
+            background-image: url(../img/cross-black.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        position: relative;
+        border: none;
+        h4 {
+            display: inline-block;
+        }
+    }
+    text-align: center;
+    hr {
+        border-color: @gray;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        margin: auto;
+    }
+    h4 {
+        font: bold 24px @OpenSans;
+        
+        position: relative;
+        background-color: white;
+        z-index: 2;
+        padding: 10px;
+    }
+    @gray: #dbdbdb;
+    border-radius: 0;
+    border: 3px solid @gray;
+}
 
 a{
     &:focus {
@@ -249,9 +381,7 @@ div.blue {
     }
     
 }
-.green {
-     #gradient > .vertical(#05cf22,#00a818);
-}
+
 button {
     border: none;
     cursor: pointer;
@@ -379,11 +509,11 @@ hr.vertical{
     height: 260px;
     margin: auto;
     border: none;
-    border-right: 3px solid fade(#162638, 25%);
+    border-right: 3px solid fade(@dark-blue, 25%);
 }
 .info {
     span {
-        color: #333;
+        color: @dark-gray;
         font: bold 30px @OpenSans;
     }
     margin: 5vh auto;
@@ -450,7 +580,7 @@ div.site {
     }
     &:hover {
         img {
-            .scale(1.15, 1.25);
+            .scale(1.25, 1.35);
         }
     
     }
@@ -476,6 +606,7 @@ div.site {
     
 }
 .feedback {
+    width: 470px;
     .feedback-wrapper {
         margin: 10px auto;
     }
@@ -672,7 +803,7 @@ address {
         margin: 0 20px;
         span {
             font: 17px @Raleway;
-            color: #333;
+            color: @dark-gray;
         }
     }
 }

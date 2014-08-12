@@ -8,11 +8,103 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:400,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:400,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>   
     
 </head>
 <body>
+    <!-- Modal -->
+    <div class="modal fade" id="order" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="invisible">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title upper dark-blue" id="myModalLabel">Заполнить заявку</h4>
+            <hr>
+          </div>
+          <div class="modal-body">
+            <form action="">
+                <div class="field clearfix">
+                    <span class="fieldname upper dark-gray">Пожалуйста, представьтесь:</span>
+                    <div class="input">
+                        <input type="text" placeholder="Ваше имя:" tabindex='1' autofocus name='name'>
+                    </div>
+                </div>
+                <div class="field clearfix">
+                    <span class="fieldname upper dark-gray">Как с вами связаться:</span>
+                    <div class="input">
+                        <input type="email" tabindex='2' placeholder="Ваш e-mail:" name="email">
+                        <span class="upper center dark-gray">или</span>
+                        <input type="tel" placeholder="Телефон:" tabindex='3' name="tel">
+                        <h4 class="upper dark-blue text-left">Вы заказали</h4>
+                        <div class="features clearfix">
+                            <div class=" upper full-width option">Интернет-магазин. Уникальный дизайн<a href="" class="exit"></a></div>
+                            <div class=" upper half-width option">Продвижение<a href="" class="exit"></a></div>
+                            <div class=" upper half-width option">Шаверму<a href="" class="exit"></a></div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="field clearfix">
+                    <span class="fieldname upper dark-gray">Пожалйста, представьтесь:</span>
+                    <div class="input">
+                        <textarea type="text" tabindex='4' placeholder="Ваше имя:" tabindex='1' autofocus name='name'></textarea>
+                        <button type="submit" class="pull-left transparent yellow button upper">Отправить</button>
+                    </div>
+                </div>
+                
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal-end -->
+    <!-- feedback modal -->
+    <div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="invisible">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title upper dark-blue" id="myModalLabel">Оставить отзыв</h4>
+          </div>
+          <div class="modal-body">
+            <form action="" enctype="multipart/form-data" name="feedback">
+                <div class="field clearfix">
+                    <span class="fieldname upper dark-gray">Пожалйста, представьтесь:</span>
+                    <div class="input">
+                        <input type="text" tabindex='1' autofocus name='name'>
+                    </div>
+                </div>
+                <div class="field clearfix">
+                    <span class="fieldname upper dark-gray">Ссылка на сайт:</span>
+                    <div class="input">
+                        <input type="text" tabindex='2'  name='site'>
+                    </div>
+                </div>
+                <div class="field clearfix">
+                    <span class="fieldname upper dark-gray">Ваш e-mail:</span>
+                    <div class="input">
+                        <input type="email" tabindex='3'  name='mail'>
+                    </div>
+                </div>
+                <div class="field clearfix">
+                    <span class="fieldname upper dark-gray">Ваше фото:</span>
+                    <div class="input">
+                        <label for="file" class="pull-left button dark-gray upper transparent">выберите файл</label>
+                        <input type="file" id="file" accept="image/*,image/jpeg" tabindex='4'  name='photo'>
+                    </div>
+                </div>
+                <div class="field clearfix">
+                    <span class="fieldname upper dark-gray">Текст отзыва:</span>
+                    <div class="input">
+                        <textarea type="text" tabindex='4' name='text'></textarea>
+                        <button type="submit" class="pull-left yellow button upper">Отправить</button>
+                    </div>
+                </div>                
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- feedback modal end -->
     <aside class="nav">
         <a class="logo upper" href="#main">Kievdev</a>
         <hr>
@@ -47,42 +139,42 @@
             </div>
             <div class="red">
                 <div class="container">
-                <h1>Услуги</h1>
-                <div class="row">
-                    <div class="col-xs-3">
-                        <div class="service">
-                            <img src="img/anal.png" alt="analysis" class="pic">
-                            <br>
-                            <h6 class="underline">Анализ</h6><br><h6 class='underline'>рынка</h6>
-                            <span class="about">Вы будете знать все о Ваших конкурентах</span>
+                    <h1>Услуги</h1>
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="service">
+                                <img src="img/anal.png" alt="analysis" class="pic">
+                                <br>
+                                <h6 class="underline">Анализ</h6><br><h6 class='underline'>рынка</h6>
+                                <span class="about">Вы будете знать все о Ваших конкурентах</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="service">
+                                <img src="img/design.png" alt="design" class="pic">
+                                <br>
+                                <h6 class="underline">Уникальный</h6><br><h6 class='underline'>дизайн</h6>
+                                <span class="about">Ничто не сравниться с вашим сайтом</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="service">
+                                <img src="img/seo.png" alt="seo" class="pic">
+                                <br>
+                                <h6 class="underline">Услуги</h6><br><h6 class='underline'>продвижения</h6>
+                                <span class="about">Вы станете первым срди первых</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="service">
+                                <img src="img/html.png" alt="html" class="pic">
+                                <br>
+                                <h6 class="underline">Услуги верстки и</h6><br><h6 class='underline'>программирования</h6>
+                                <span class="about">Управлять сайтом легко и просто</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-3">
-                        <div class="service">
-                            <img src="img/design.png" alt="design" class="pic">
-                            <br>
-                            <h6 class="underline">Уникальный</h6><br><h6 class='underline'>дизайн</h6>
-                            <span class="about">Ничто не сравниться с вашим сайтом</span>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <div class="service">
-                            <img src="img/seo.png" alt="seo" class="pic">
-                            <br>
-                            <h6 class="underline">Услуги</h6><br><h6 class='underline'>продвижения</h6>
-                            <span class="about">Вы станете первым срди первых</span>
-                        </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <div class="service">
-                            <img src="img/html.png" alt="html" class="pic">
-                            <br>
-                            <h6 class="underline">Услуги верстки и</h6><br><h6 class='underline'>программирования</h6>
-                            <span class="about">Управлять сайтом легко и просто</span>
-                        </div>
-                    </div>
-                </div>
-                <a class="upper button yellow shadow" href="">Рассчитать стоимость</a>
+                    <a class="upper button yellow shadow" href="">Рассчитать стоимость</a>
                 </div>
             </div>
         </section>
@@ -116,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="button yellow upper">Заказать</a>
+                <a href="#" data-toggle="modal" data-target="#order" class="button yellow upper">Заказать</a>
             </div>
         </section>
         <section id="portfolio">
@@ -190,7 +282,7 @@
                         <div class="feedback">
                             <div class="feedback-wrapper clearfix">
                                 <div class="photo pull-left">
-                                    <img src="img/ebalo.jpg" alt="photo">
+                                    <img src="img/empty-ebalo.jpg" alt="photo">
                                 </div>
                                 <div class="info pull-left">
                                     <h5 class="name">Евгений</h5>
@@ -259,7 +351,7 @@
                 </div>
                 <a href="" class="button border-gray transparent upper">Загрузить еще</a>
                 <h4 class="black">Работали с нами?</h4>
-                <a href="" class="button transparent upper yellow">оставить отзыв</a>
+                <a href="" class="button transparent upper yellow" data-toggle="modal" data-target="#feedback">оставить отзыв</a>
             </div>
         </section>
         <section id="blog">

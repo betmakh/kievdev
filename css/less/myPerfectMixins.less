@@ -1,0 +1,18 @@
+.placeholder(@color, @fontStyle: 18px){
+    &::-webkit-input-placeholder {
+            color: @color;
+            font: @fontStyle;
+        }
+        &:-moz-placeholder {
+            color: @color;
+            font: @fontStyle;
+        }
+        &::-moz-placeholder {
+            color: @color;    
+            font: @fontStyle;   
+        }
+        &:-ms-input-placeholder {  
+            color: @color;  
+            font: @fontStyle;  
+        }
+}
