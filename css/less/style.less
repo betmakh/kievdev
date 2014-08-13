@@ -20,6 +20,11 @@
 .dark-gray {
     color: @dark-gray;
 }
+
+
+// .container, section {
+//     min-width: 1000px;
+// }
 // feedback modal
 #file {
     display: none;
@@ -87,14 +92,10 @@ label[for="file"]{
     }
     .input {
         input, textarea {
-            outline: none;
-            padding: 0 10px;
+            // outline: none;
+            // padding: 0 10px;
             display: block;
             width: 100%;
-            border: 2px solid #dfdfdf;
-            &:focus {
-                border-color: fade(@yellow, 15%);
-            }
             font: 600 18px/@field-height @OpenSans;
             color: #999;
             .placeholder(#999, 600 18px  @OpenSans);
@@ -146,6 +147,14 @@ label[for="file"]{
     border-radius: 0;
     border: 3px solid @gray;
 }
+input, textarea {
+    outline: none;
+    padding: 0 10px;    
+    border: 2px solid #dfdfdf;
+    &:focus {
+        border-color: fade(@yellow, 15%);
+    }
+}
 
 a{
     &:focus {
@@ -171,6 +180,7 @@ body, html {
 }
 #body{
     // float: left;
+    position: relative;
     overflow: auto;
     margin: 0;
     height: 100%;
@@ -179,14 +189,18 @@ body, html {
 }
 section {
     text-align: center;
-    height: 100%;
+    min-height: 100%;
     &:not(#main){
         padding: 3vh 0;
     }
     background-color: #eaf1f9;
-    min-height: @min-height;
+    &#main {
+        min-height: @min-height;
+        height: 100%;
+    }
+
 }
-.nav {
+.main-navbar {
     float: left;
     min-height: @min-height;
     position: relative;
@@ -207,30 +221,56 @@ hr {
 nav {
     padding-left: 14%;
     margin-bottom: 20px;
-
-    a {
-        .transition(.2s);
-        &.selected {
-            color: @yellow;
-        }
-        @media (min-height: 900px) {
-            font-size: 25px;
-            margin: 30px 0;
-        }
-        margin: 35px 0;
-        &:hover {
-            color: white;
-        }
-        color: #fff;
+    .clearfix();
+    .nav.nav-pills.nav-stacked {
         display: block;
-        font: bold 21px  @Raleway;
-        &:last-of-type {
-            margin-bottom: 20px;
-        }
-        &:first-of-type {
-            margin-top: 20px;
+        width: auto;
+        float: none;
+        margin: 0;
+        padding: 0;
+        li {
+            a {
+                text-transform: uppercase;
+                border-radius: 0;
+                color: white;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: auto;
+            .transition(.2s);
+            &.active {
+                a {
+                    color: @yellow;
+                    background-color: transparent;
+                }
+                color: @yellow;
+                padding-left: 20px;
+                background-color: transparent;
+            }
+            @media (min-height: 900px) {
+                font-size: 25px;
+                margin: 30px 0;
+            }
+            margin: 3px 0;
+            &:hover {
+                color: white;
+            }
+            color: #fff;
+            display: block;
+            font: bold 21px  @Raleway;
+            &:last-of-type {
+                margin-bottom: 20px;
+            }
+            &:first-of-type {
+                margin-top: 20px;
+            }
         }
     }
+
 }
 
 .lang {
@@ -253,6 +293,11 @@ nav {
 .logo {
     font: 900 36px/70px @Raleway;
     color: #fff;
+    .transition(.2s ease-in-out);
+    &:hover {
+        .scale(1.2);
+        color: fade(@yellow, 50%)
+    }
     @media (min-height: 900px){
         padding: 55px 10px;
         font-size: 40px;
@@ -385,9 +430,6 @@ div.blue {
 button {
     border: none;
     cursor: pointer;
-    outline: none;
-}
-input {
     outline: none;
 }
 h1 {
@@ -607,7 +649,9 @@ div.site {
     
 }
 .feedback {
-    width: 470px;
+    margin: @triangle-size + 5px auto 9vh;
+    max-width: 480px;
+    min-width: 400px;
     .feedback-wrapper {
         margin: 10px auto;
     }
@@ -615,8 +659,6 @@ div.site {
     @offset: 20px;
     border: 2px solid @yellow;
     background-color: white;
-    margin-top:  @triangle-size + 5px;
-    margin-bottom: 5vh;
     position: relative;
     z-index: 2;
     &:before, &:after {
@@ -744,8 +786,8 @@ p {
     input {
         height: 40px;
         width: 220px;
-        border: 2px solid rgba(153,153,153,0.3);
-        padding: 0 10px;
+        // border: 2px solid rgba(153,153,153,0.3);
+        // padding: 0 10px;
         color: @gray;
         font: @Raleway;
         .placeholder(@gray, 17px @Raleway);

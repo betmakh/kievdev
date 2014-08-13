@@ -105,7 +105,7 @@
       </div>
     </div>
     <!-- feedback modal end -->
-    <aside class="nav">
+    <aside class="main-navbar">
         <a class="logo upper" href="#main">Kievdev</a>
         <hr>
         <div class="lang">
@@ -114,13 +114,21 @@
             <a id="en" href="" class="upper">en</a>
         </div>
         <hr>
-        <nav>
-            <a href="" class="upper selected">Услуги</a>
+        <nav id="main-nav">
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#main">Услуги</a></li>
+              <li><a href="#calc" class="upper">Калькулятор</a></li>
+              <li><a href="#portfolio" class="upper">Порфолио</a></li>
+              <li> <a href="#about" class="upper">О нас</a></li>
+              <li><a href="#blog" class="upper">Блог</a></li>
+              <li><a href="#contacts" class="upper">контакты</a></a></li>
+            </ul>
+            <!-- <a href="#main" class="upper active">Услуги</a>
             <a href="#calc" class="upper">Калькулятор</a>
             <a href="#portfolio" class="upper">Порфолио</a>
             <a href="#about" class="upper">О нас</a>
             <a href="#blog" class="upper">Блог</a>
-            <a href="#contacts" class="upper">контакты</a>
+            <a href="#contacts" class="upper">контакты</a> -->
         </nav>
         <hr>
         <div class="socials">
@@ -128,7 +136,7 @@
             <a id="fb" href=""></a>
         </div>
     </aside>
-    <div id="body">
+    <div id="body" data-spy="scroll" data-target="#main-nav">
         <section id="main">
             <!-- <a class="callback upper button" href="">Обратный звонок</a> -->
             <div class="blue">
@@ -227,28 +235,28 @@
                     </div>
                 </div>                
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-xs-6">
                         <div class="site">
                             <h6 class="site-name black">Company Company</h6>
                             <a href=""><img src="img/sites/site-1.jpg" alt="site"></a>
                             <span class="info black">Разработка сайта</span>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-xs-6">
                         <div class="site">
                             <h6 class="site-name black">Company Company</h6>
                             <a href=""><img src="img/sites/site-2.jpg" alt="site"></a>
                             <span class="info black">Разработка сайта</span>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-xs-6">
                         <div class="site">
                             <h6 class="site-name black">Company Company</h6>
                             <a href=""><img src="img/sites/site-3.jpg" alt="site"></a>
                             <span class="info black">Разработка сайта</span>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-xs-6">
                         <div class="site">
                             <h6 class="site-name black">Company Company</h6>
                             <a href=""><img src="img/sites/site-1.jpg" alt="site"></a>
@@ -278,7 +286,7 @@
                 <h4 class="black">О нас</h4>
                 <span>Лучше о нас расскажут только наши клиенты</span>
                 <div class="row">
-                    <div class="col-xs-6">
+                    <div class="col-lg-6 col-md-12">
                         <div class="feedback">
                             <div class="feedback-wrapper clearfix">
                                 <div class="photo pull-left">
@@ -295,7 +303,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-lg-6 col-md-12">
                         <div class="feedback ">
                             <div class="feedback-wrapper clearfix">
                                 <div class="photo pull-left">
@@ -314,7 +322,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-6">
+                    <div class="col-lg-6 visible-lg-block">
                         <div class="feedback ">
                             <div class="feedback-wrapper clearfix">
                                 <div class="photo pull-left">
@@ -331,7 +339,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-md-6 visible-lg-block">
                         <div class="feedback ">
                             <div class="feedback-wrapper clearfix">
                                 <div class="photo pull-left">

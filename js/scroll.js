@@ -23,8 +23,8 @@ $(function(){
 	//binding scroll to hash-links
 	$('nav a').on('click',function (e) {
 			/*$(window).off('scroll');*/
-			$('nav a').removeClass('selected');
-			$(this).addClass('selected');
+			$('nav a').removeClass('active');
+			$(this).addClass('active');
 			e.preventDefault();		
 			if(window.location.hash == target) return; 
 			var target = this.hash;		

@@ -77,17 +77,10 @@ label[for="file"].button {
 }
 .modal-content .input input,
 .modal-content .input textarea {
-  outline: none;
-  padding: 0 10px;
   display: block;
   width: 100%;
-  border: 2px solid #dfdfdf;
   font: 600 18px/30px 'Open Sans', sans-serif;
   color: #999;
-}
-.modal-content .input input:focus,
-.modal-content .input textarea:focus {
-  border-color: rgba(250, 188, 0, 0.15);
 }
 .modal-content .input input::-webkit-input-placeholder,
 .modal-content .input textarea::-webkit-input-placeholder {
@@ -148,6 +141,16 @@ label[for="file"].button {
   z-index: 2;
   padding: 10px;
 }
+input,
+textarea {
+  outline: none;
+  padding: 0 10px;
+  border: 2px solid #dfdfdf;
+}
+input:focus,
+textarea:focus {
+  border-color: rgba(250, 188, 0, 0.15);
+}
 a {
   text-decoration: none;
 }
@@ -180,6 +183,7 @@ html:after {
   clear: both;
 }
 #body {
+  position: relative;
   overflow: auto;
   margin: 0;
   height: 100%;
@@ -188,14 +192,17 @@ html:after {
 }
 section {
   text-align: center;
-  height: 100%;
+  min-height: 100%;
   background-color: #eaf1f9;
-  min-height: 660px;
 }
 section:not(#main) {
   padding: 3vh 0;
 }
-.nav {
+section#main {
+  min-height: 660px;
+  height: 100%;
+}
+.main-navbar {
   float: left;
   min-height: 660px;
   position: relative;
@@ -214,31 +221,64 @@ nav {
   padding-left: 14%;
   margin-bottom: 20px;
 }
-nav a {
+nav:before,
+nav:after {
+  content: " ";
+  display: table;
+}
+nav:after {
+  clear: both;
+}
+nav .nav.nav-pills.nav-stacked {
+  display: block;
+  width: auto;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+nav .nav.nav-pills.nav-stacked li {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-  margin: 35px 0;
+  margin: 3px 0;
   color: #fff;
   display: block;
   font: bold 21px 'Raleway', 'calibri';
 }
-nav a.selected {
+nav .nav.nav-pills.nav-stacked li a {
+  text-transform: uppercase;
+  border-radius: 0;
+  color: white;
+}
+nav .nav.nav-pills.nav-stacked li a:hover {
+  background-color: transparent;
+}
+nav .nav.nav-pills.nav-stacked li.active {
   color: #fabc00;
+  padding-left: 20px;
+  background-color: transparent;
+}
+nav .nav.nav-pills.nav-stacked li.active a {
+  color: #fabc00;
+  background-color: transparent;
 }
 @media (min-height: 900px) {
-  nav a {
+  nav .nav.nav-pills.nav-stacked li {
     font-size: 25px;
     margin: 30px 0;
   }
 }
-nav a:hover {
+nav .nav.nav-pills.nav-stacked li:hover {
   color: white;
 }
-nav a:last-of-type {
+nav .nav.nav-pills.nav-stacked li:last-of-type {
   margin-bottom: 20px;
 }
-nav a:first-of-type {
+nav .nav.nav-pills.nav-stacked li:first-of-type {
   margin-top: 20px;
 }
 .lang {
@@ -268,9 +308,19 @@ nav a:first-of-type {
 .logo {
   font: 900 36px/70px 'Raleway', 'calibri';
   color: #fff;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   display: block;
   padding: 37px 8px 23px;
   text-align: center;
+}
+.logo:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  color: rgba(250, 188, 0, 0.5);
 }
 @media (min-height: 900px) {
   .logo {
@@ -405,9 +455,6 @@ div.blue {
 button {
   border: none;
   cursor: pointer;
-  outline: none;
-}
-input {
   outline: none;
 }
 h1 {
@@ -624,11 +671,11 @@ div.site img {
   display: block;
 }
 .feedback {
-  width: 470px;
+  margin: 35px auto 9vh;
+  max-width: 480px;
+  min-width: 400px;
   border: 2px solid #fabc00;
   background-color: white;
-  margin-top: 35px;
-  margin-bottom: 5vh;
   position: relative;
   z-index: 2;
 }
@@ -753,8 +800,6 @@ p {
 #contacts input {
   height: 40px;
   width: 220px;
-  border: 2px solid rgba(153, 153, 153, 0.3);
-  padding: 0 10px;
   color: #666666;
   font: 'Raleway', 'calibri';
 }
