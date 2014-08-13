@@ -146,6 +146,7 @@ textarea {
   outline: none;
   padding: 0 10px;
   border: 2px solid #dfdfdf;
+  line-height: 30px;
 }
 input:focus,
 textarea:focus {
@@ -192,10 +193,15 @@ html:after {
 }
 section {
   text-align: center;
+  position: relative;
+  z-index: 2 ;
   min-height: 100%;
   background-color: #eaf1f9;
 }
-section:not(#main) {
+section#calc {
+  z-index: 3;
+}
+section:not(#main, #contacts) {
   padding: 3vh 0;
 }
 section#main {
@@ -308,19 +314,16 @@ nav .nav.nav-pills.nav-stacked li:first-of-type {
 .logo {
   font: 900 36px/70px 'Raleway', 'calibri';
   color: #fff;
-  -webkit-transition: 0.2s ease-in-out;
-  -o-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
   display: block;
   padding: 37px 8px 23px;
   text-align: center;
 }
 .logo:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transform: scale(1.2);
-  color: rgba(250, 188, 0, 0.5);
+  text-shadow: 0 2px 40px rgba(255, 255, 255, 0.7);
+  color: white;
 }
 @media (min-height: 900px) {
   .logo {
@@ -345,17 +348,25 @@ nav .nav.nav-pills.nav-stacked li:first-of-type {
   clear: both;
 }
 .socials a {
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center bottom;
   width: 30px;
-  height: 30px;
+  height: 35px;
   float: left;
   margin: 0 10px;
   display: block;
 }
+.socials a:hover {
+  background-position: center top;
+}
 #fb {
-  background: url(../img/fb-ico.png);
+  background-image: url(../img/fb-ico.png);
 }
 #vk {
-  background: url(../img/vk-ico.png);
+  background-image: url(../img/vk-ico.png);
 }
 .upper {
   text-transform: uppercase;
@@ -375,12 +386,20 @@ div.blue {
   background: url(../img/main-bg.png) 50% 50% no-repeat;
   background-size: cover;
 }
+.services {
+  margin: 3vh auto;
+}
 .service {
   text-align: center;
 }
 .service img {
   height: 64px;
   margin-bottom: 11px;
+}
+@media (min-height: 900px) {
+  .service img {
+    height: 100px;
+  }
 }
 .service .about {
   display: block;
@@ -409,6 +428,11 @@ div.blue {
   font: 900 19px 'Raleway', 'calibri';
   position: relative;
 }
+.button:focus {
+  color: #0b0b0b;
+  box-shadow: none;
+  outline: none;
+}
 .button.transparent {
   background-color: transparent;
 }
@@ -432,18 +456,17 @@ div.blue {
   margin: auto;
   left: 0;
   right: 0;
-  bottom: 40px;
+  bottom: 3vh;
 }
 .button.shadow:after {
   display: block;
   content: '';
-  left: 0;
-  top: -10px;
+  left: 1px;
+  top: 5px;
   position: absolute;
-  width: 163%;
-  height: 200%;
+  width: 400px;
+  height: 100px;
   background: url(../img/button-shadow.png) no-repeat;
-  background-position: 14% -14%;
 }
 .yellow {
   background-color: #fabc00;
@@ -459,7 +482,7 @@ button {
 }
 h1 {
   text-align: center;
-  margin: 0 auto 5%;
+  margin: 2vh auto 4vh;
   color: white;
   font: bold 47px/43px 'Raleway', 'calibri';
 }
@@ -579,7 +602,7 @@ h4 {
 hr.vertical {
   width: 0;
   display: block;
-  height: 260px;
+  height: 350px;
   margin: auto;
   border: none;
   border-right: 3px solid rgba(22, 38, 56, 0.25);
@@ -796,6 +819,12 @@ p {
 #contacts {
   height: auto;
   position: relative;
+  padding-bottom: 0;
+}
+#contacts .container {
+  position: relative;
+  z-index: 4;
+  box-shadow: 0 5px 9px #eaf1f9;
 }
 #contacts input {
   height: 40px;
@@ -804,20 +833,20 @@ p {
   font: 'Raleway', 'calibri';
 }
 #contacts input::-webkit-input-placeholder {
-  color: #666666;
-  font: 17px 'Raleway', 'calibri';
+  color: #666666, 0.56666667px;
+  font: 'Raleway', 'calibri';
 }
 #contacts input:-moz-placeholder {
-  color: #666666;
-  font: 17px 'Raleway', 'calibri';
+  color: #666666, 0.56666667px;
+  font: 'Raleway', 'calibri';
 }
 #contacts input::-moz-placeholder {
-  color: #666666;
-  font: 17px 'Raleway', 'calibri';
+  color: #666666, 0.56666667px;
+  font: 'Raleway', 'calibri';
 }
 #contacts input:-ms-input-placeholder {
-  color: #666666;
-  font: 17px 'Raleway', 'calibri';
+  color: #666666, 0.56666667px;
+  font: 'Raleway', 'calibri';
 }
 #contacts form span {
   font: 18px 'Raleway', 'calibri';
@@ -837,11 +866,16 @@ p {
   margin: 5vh auto 4vh;
 }
 .map {
+  overflow: hidden;
   height: 25%;
   background-color: transparent;
   bottom: 0;
-  z-index: 1;
+  position: relative;
+  z-index: 3;
   min-height: 200px;
+  width: 100%;
+}
+.map img {
   width: 100%;
 }
 address {
