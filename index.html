@@ -11,7 +11,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:400,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>   
     <!-- saved from url=(0014)about:internet -->   
 </head>
-<body>
+<body data-spy="scroll" data-target="#main-nav">
     <!-- Modal -->
     <div class="modal fade" id="order" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -136,7 +136,7 @@
             <a id="fb" href=""></a>
         </div>
     </aside>
-    <div id="body" data-spy="scroll" data-target="#main-nav">
+    <div id="body">
         <section id="main">
             <!-- <a class="callback upper button" href="">Обратный звонок</a> -->
             <div class="blue">
@@ -401,15 +401,17 @@
                     +38 050 123 45 67
                 </div>
             </address>
-            </div>
-            <div class="map">
-                <img src="img/map.png" alt="">
-            </div>
-        </section>
+            </div>            
+        </section>              
     </div>
+    <div class="map" id="map">
+        <img src="img/map.png" alt="">
+    </div> 
+    
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>   
     <script type="text/javascript" src="js/scroll.js"></script>
+     <script type="text/javascript" src="js/parallax.js"></script>
     <script type="text/javascript" src="js/main.js"></script>    
     <!--[if lt IE 9]>
     <script src="js/html5shiv.min.js"></script>

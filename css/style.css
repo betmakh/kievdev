@@ -169,7 +169,6 @@ body,
 html {
   -webkit-font-smoothing: auto;
   min-width: 1000px;
-  height: 100%;
   min-height: 660px;
 }
 body:before,
@@ -183,10 +182,12 @@ body:after,
 html:after {
   clear: both;
 }
+body {
+  position: relative;
+}
 #body {
   position: relative;
-  overflow: auto;
-  margin: 0;
+  margin-left: 280px;
   height: 100%;
   min-height: 660px;
   text-align: center;
@@ -194,26 +195,32 @@ html:after {
 section {
   text-align: center;
   position: relative;
-  z-index: 2 ;
-  min-height: 100%;
+  z-index: 4 ;
   background-color: #eaf1f9;
 }
+@media (min-height: 660px) {
+  section {
+    min-height: 100vh;
+  }
+  section#main div.red {
+    height: 51vh;
+  }
+  section#main div.blue {
+    height: 49vh;
+  }
+}
 section#calc {
-  z-index: 3;
+  z-index: 5;
 }
 section:not(#main, #contacts) {
   padding: 3vh 0;
 }
-section#main {
-  min-height: 660px;
-  height: 100%;
-}
 .main-navbar {
   float: left;
   min-height: 660px;
-  position: relative;
-  width: 22%;
-  max-width: 280px;
+  position: fixed;
+  z-index: 2;
+  width: 280px;
   height: 100%;
   background-color: #003333;
 }
@@ -374,13 +381,12 @@ nav .nav.nav-pills.nav-stacked li:first-of-type {
 /*section*/
 div.red {
   background-color: rgba(143, 58, 74, 0.75);
-  height: 51%;
+  min-height: 320px;
   position: relative;
 }
 div.blue {
   background-color: rgba(4, 61, 93, 0.75);
   padding: 7vh 0 6vh;
-  height: 49%;
 }
 #main {
   background: url(../img/main-bg.png) 50% 50% no-repeat;
@@ -817,14 +823,11 @@ p {
 }
 /*contacts*/
 #contacts {
+  margin-bottom: 350px;
+  box-shadow: 0 5px 9px #eaf1f9;
   height: auto;
   position: relative;
   padding-bottom: 0;
-}
-#contacts .container {
-  position: relative;
-  z-index: 4;
-  box-shadow: 0 5px 9px #eaf1f9;
 }
 #contacts input {
   height: 40px;
@@ -867,13 +870,13 @@ p {
 }
 .map {
   overflow: hidden;
-  height: 25%;
-  background-color: transparent;
-  bottom: 0;
-  position: relative;
-  z-index: 3;
-  min-height: 200px;
+  z-index: 1;
+  right: 0;
   width: 100%;
+  height: 350px;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
 }
 .map img {
   width: 100%;

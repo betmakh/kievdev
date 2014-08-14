@@ -1,10 +1,22 @@
 $(function(){
 	//scroll to target hash alement
+	// window.scrollBottom = function(){
+		// var winHeight = $(window).height(),
+		// 	lastSectionHeight = $('section:last-of-type').height(),
+		// 	offset = lastSectionHeight - winHeight,
+		// 	scrollLast = $('section:last-of-type').offset().top - $('#main').offset().top;
+
+	// 		$('#body').stop().animate({
+	// 			'scrollTop': scrollLast + offset,
+	// 			queue: false
+	// 		}, 30);
+	// }
 	var smoothScroll = function(target){
-		var $target = $(target);
+		var $target = $(target),
+			offset = $target.offset().top;
 		this.speed = 200;
-		$('#body').stop().animate({
-				'scrollTop': $target.offset().top,
+		$('body').stop().animate({
+				'scrollTop': offset,
 				queue: false
 			}, this.speed, 'linear', function () {
 				window.location.hash = target;
@@ -12,15 +24,6 @@ $(function(){
 			});
 	}
 	
-	//autoco
-
-	/*$(window).on('scroll',scrollCorrecting);*/
-
-	/*$('#scrollTop').on('click',function (e){
-		$('#scrollBot').show().attr('href',window.location.hash).css('display','block');
-
-	});*/
-	//binding scroll to hash-links
 	$('nav a').on('click',function (e) {
 			/*$(window).off('scroll');*/
 			$('nav a').removeClass('active');

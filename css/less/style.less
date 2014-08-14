@@ -174,17 +174,23 @@ a{
 body, html {
     -webkit-font-smoothing: auto;
     min-width: 1000px;
+    // overflow: hidden;
     .clearfix();
-    height: 100%;
+    // height: 100%;
     // width: 100%;
     min-height: @min-height;
 
 }
+body {
+    position: relative;
+}
 #body{
     // float: left;
     position: relative;
-    overflow: auto;
-    margin: 0;
+    // overflow: auto;
+    // width: 100%;
+    // width: 78%;
+    margin-left: 280px;
     height: 100%;
     min-height: @min-height;
     text-align: center;
@@ -192,28 +198,39 @@ body, html {
 section {
     text-align: center;
     position: relative;
-    z-index: 2 ;
-    min-height: 100%;
+    z-index: 4 ;
+    @media(min-height: @min-height) {
+        min-height: 100vh;
+        &#main {
+            div.red {
+                height: 51vh;
+            }
+            div.blue {
+                height: 49vh;
+            }
+        }
+    }
+    // min-height: 100%;
     &#calc {
-        z-index: 3;
+        z-index: 5;
     }
     &:not(#main, #contacts){
         padding: 3vh 0;
     }
     background-color: @section-color;
-    &#main {
-        min-height: @min-height;
-        height: 100%;
-    }
+    // &#main {
+    //     min-height: @min-height;
+    //     height: 100%;
+    // }
 
 }
 .main-navbar {
     float: left;
     min-height: @min-height;
-    position: relative;
+    position: fixed;
+    z-index: 2;
     // min-width: 250px;
-    width: 22%;
-    max-width: 280px;
+    width: 280px;
     height: 100%;
     background-color: @sideBarColor;
 }
@@ -349,13 +366,14 @@ nav {
 //main
 div.red {
     background-color: fade(@red, 75%);
-    height: 51%;
+    // height: 51%;
+    min-height: 320px;
     position: relative;
 }
 div.blue {
     background-color: fade(@blue, 75%);
     padding:7vh 0 6vh;
-    height: 49%;
+    // height: 49%;
 }
 #main {
     background: url(../img/main-bg.png) 50% 50% no-repeat;
@@ -804,11 +822,11 @@ p {
 @contacts-bg: #e8eaec;
 
 #contacts {
-    .container{
-        position: relative;
-        z-index: 4;
-        box-shadow: 0 5px 9px @section-color;
-    }
+    margin-bottom: @map-height;
+    box-shadow: 0 5px 9px @section-color;
+    // .container{
+    //     box-shadow: 0 5px 9px @section-color;
+    // }
     height: auto;
     position: relative;
     padding-bottom: 0;
@@ -837,19 +855,21 @@ p {
         margin: 5vh auto 4vh;
     }
 }
+@map-height: 350px;
 .map {
     overflow: hidden;
+    z-index: 1;
+    right: 0;
+    width: 100%;
+    bottom: 0;
     img {
         width: 100%
     }
-    height: 25%;
+    height: @map-height;
     background-color: transparent;
-    // position: absolute;
+    position: absolute;
     bottom: 0;
-    position: relative;
-    z-index: 3;
-    min-height: 200px;
-    width: 100%;
+    // width: 100% - 14px;
 }
 @gray: #666;
 address {
