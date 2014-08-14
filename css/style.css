@@ -198,9 +198,15 @@ section {
   z-index: 4 ;
   background-color: #eaf1f9;
 }
+section#main {
+  background: transparent;
+}
 @media (min-height: 660px) {
   section {
     min-height: 100vh;
+  }
+  section#main {
+    height: 100vh;
   }
   section#main div.red {
     height: 51vh;
@@ -219,7 +225,7 @@ section:not(#main, #contacts) {
   float: left;
   min-height: 660px;
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   width: 280px;
   height: 100%;
   background-color: #003333;
@@ -388,9 +394,19 @@ div.blue {
   background-color: rgba(4, 61, 93, 0.75);
   padding: 7vh 0 6vh;
 }
-#main {
+#main-bg {
   background: url(../img/main-bg.png) 50% 50% no-repeat;
   background-size: cover;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  height: 660px;
+}
+@media (min-height: 660px) {
+  #main-bg {
+    height: 100vh;
+  }
 }
 .services {
   margin: 3vh auto;

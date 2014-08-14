@@ -199,9 +199,13 @@ section {
     text-align: center;
     position: relative;
     z-index: 4 ;
+    &#main {
+        background: transparent;
+    }
     @media(min-height: @min-height) {
         min-height: 100vh;
         &#main {
+            height: 100vh;
             div.red {
                 height: 51vh;
             }
@@ -228,7 +232,7 @@ section {
     float: left;
     min-height: @min-height;
     position: fixed;
-    z-index: 2;
+    z-index: 5;
     // min-width: 250px;
     width: 280px;
     height: 100%;
@@ -375,9 +379,19 @@ div.blue {
     padding:7vh 0 6vh;
     // height: 49%;
 }
-#main {
+
+#main-bg {
     background: url(../img/main-bg.png) 50% 50% no-repeat;
     background-size: cover;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    height: @min-height;
+    @media(min-height: @min-height) {
+        height: 100vh;
+    }
+
 }
 .services {
     margin: 3vh auto;

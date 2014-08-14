@@ -1,13 +1,11 @@
 
-window.onload = function(){
+window.onload = setTimeout(function(){
 
-    var scrollBot = $('body').height() - $(window).height() ;
+    var scrollBot = $('body').outerHeight() - $(window).height();
 
     $(document).on('scroll',function(){
-        scrolled = $('body').scrollTop();
-        // if(scrolled == scrollBot)
-        //     alert('intheend');
-        // console.log(scrolled);
-        $('.map').css('bottom',0.3*(scrollBot - scrolled)+'px');
+        scrolled = $(window).scrollTop();
+        $('.map').css('transform','translateY(' + 0.5*(scrolled - scrollBot)+'px)');
+        $('#main-bg').css('transform','translateY(' + 0.5*scrolled + 'px)');
     }); 
-}
+}, 700);
